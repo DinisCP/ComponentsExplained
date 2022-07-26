@@ -42,7 +42,7 @@ export default function HomeScreen({ navigation }) {
         },
       ];  
       
-      const oneAnimal = ({ item }) => (
+      const oneArtigo = ({ item }) => (
         <View style={ styles.item }>
           
           <Image source={ item.image } style={ styles.avatar } />    
@@ -54,7 +54,9 @@ export default function HomeScreen({ navigation }) {
 
         </View>    
       );
-    
+  
+
+
       listSeparator = () => {
         return <View style={ styles.separator } />
       }    
@@ -63,7 +65,7 @@ export default function HomeScreen({ navigation }) {
         <SafeAreaView style={ styles.container }>
           <FlatList              
             data = { artigos }
-            renderItem={oneAnimal}        
+            renderItem={oneArtigo}        
             ItemSeparatorComponent={ listSeparator }
             // keyExtractor={ animals => animals.whatever }
           />      
